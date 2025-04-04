@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "matcha_mod:item/raw_sapphire"
+  }
+}
