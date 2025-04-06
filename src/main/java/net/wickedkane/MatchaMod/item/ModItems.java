@@ -14,8 +14,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", // Item one
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire", // Another item
-            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> MATCHA_COOKIE = ITEMS.register("matcha_cookie",
+            () -> new Item(new Item.Properties().food(ModFoods.MATCHA_COOKIE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
