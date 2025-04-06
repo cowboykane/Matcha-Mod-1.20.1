@@ -15,15 +15,13 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MatchaMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("matcha_tab",
+            // Adds items to creative mode tab
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
                     .title(Component.translatable("creativetab.matcha_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.SAPPHIRE.get());
-                        pOutput.accept(ModItems.RAW_SAPPHIRE.get());
-
-                        pOutput.accept(Items.DIAMOND);
-
-
+                        ModItems.ITEMS.getEntries().forEach(item -> {
+                            pOutput.accept(item.get());
+                        });
                     })
                     .build());
 
