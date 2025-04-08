@@ -13,6 +13,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.wickedkane.MatchaMod.block.ModBlocks;
 import net.wickedkane.MatchaMod.item.ModCreativeModeTabs;
 import net.wickedkane.MatchaMod.item.ModItems;
 import org.slf4j.Logger;
@@ -32,6 +33,7 @@ public class MatchaMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus); // add items to the game
+        ModBlocks.register(modEventBus); // add blocks DUH USE YOUR BRAIN STUPID ADUHHHH
 
         modEventBus.addListener(this::commonSetup);
 
@@ -50,6 +52,7 @@ public class MatchaMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.MATCHA_COOKIE);
+            event.accept(ModItems.MATCHA_POWDER);
 
         }
     }

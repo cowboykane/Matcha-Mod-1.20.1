@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.wickedkane.MatchaMod.MatchaMod;
+import net.wickedkane.MatchaMod.block.ModBlocks;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -21,6 +22,8 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         ModItems.ITEMS.getEntries().forEach(item -> {
                             pOutput.accept(item.get());
+                            // needs to be updated for blocks to appear in creative tab in da loop
+                            pOutput.accept(ModBlocks.EVIL_BLOCK.get());
                         });
                     })
                     .build());
