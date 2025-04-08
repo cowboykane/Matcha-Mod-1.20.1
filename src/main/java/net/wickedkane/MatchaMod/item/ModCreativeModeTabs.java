@@ -23,7 +23,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         ModItems.ITEMS.getEntries().forEach(item -> {
                             pOutput.accept(item.get());
-                            // needs to be updated for blocks to appear in creative tab in da loop
+                            // needs to be updated for blocks to appear in creative tab in da loop   x
                             pOutput.accept(ModBlocks.EVIL_BLOCK.get());
                         });
                         ModBlocks.BLOCKS.getEntries().forEach(blockRegistryObject-> {
