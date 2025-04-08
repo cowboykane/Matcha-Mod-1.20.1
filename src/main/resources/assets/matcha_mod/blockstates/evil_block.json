@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "matcha_mod:block/evil_block"
+    }
+  }
+}

@@ -9,19 +9,22 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.wickedkane.MatchaMod.MatchaMod;
+import net.wickedkane.MatchaMod.block.ModBlocks;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MatchaMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("matcha_tab",
+            // Adds items to creative mode tab
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
                     .title(Component.translatable("creativetab.matcha_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         ModItems.ITEMS.getEntries().forEach(item -> {
                             pOutput.accept(item.get());
+                            // needs to be updated for blocks to appear in creative tab in da loop
+                            pOutput.accept(ModBlocks.EVIL_BLOCK.get());
                         });
-
                     })
                     .build());
 
