@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.wickedkane.MatchaMod.MatchaMod;
 import net.wickedkane.MatchaMod.block.ModBlocks;
+import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -24,6 +25,9 @@ public class ModCreativeModeTabs {
                             pOutput.accept(item.get());
                             // needs to be updated for blocks to appear in creative tab in da loop
                             pOutput.accept(ModBlocks.EVIL_BLOCK.get());
+                        });
+                        ModBlocks.BLOCKS.getEntries().forEach(blockRegistryObject-> {
+                            pOutput.accept(blockRegistryObject.get().asItem());
                         });
                     })
                     .build());
