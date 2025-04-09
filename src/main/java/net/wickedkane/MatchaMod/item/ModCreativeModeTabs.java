@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("matcha_tab",
             // Adds items to creative mode tab
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MATCHA_POWDER.get()))
                     .title(Component.translatable("creativetab.matcha_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         ModItems.ITEMS.getEntries().forEach(item -> {
