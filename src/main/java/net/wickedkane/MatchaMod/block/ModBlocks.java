@@ -21,12 +21,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> EVIL_BLOCK = registerBlock("evil_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.ANVIL)));
 
-    public static final RegistryObject<Block> CAMELLIA_SINENSIS = registerBlock("camellia_sinensis",
+    /* public static final RegistryObject<Block> CAMELLIA_SINENSIS = registerBlock("camellia_sinensis",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
                     BlockBehaviour.Properties.copy(Blocks.ALLIUM).noOcclusion().noCollission()));
     public static final RegistryObject<Block> POTTED_CAMELLIA_SINENSIS = BLOCKS.register("potted_camellia_sinensis",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CAMELLIA_SINENSIS,
-                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission())); */
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block); // registers block

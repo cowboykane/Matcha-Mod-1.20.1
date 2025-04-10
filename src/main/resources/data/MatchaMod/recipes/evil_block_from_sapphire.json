@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "matcha_mod:sapphire"
+    }
+  },
+  "result": {
+    "item:": "matcha_mod:evil_block"
+  }
+}

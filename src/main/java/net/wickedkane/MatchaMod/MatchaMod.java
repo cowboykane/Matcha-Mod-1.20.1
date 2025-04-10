@@ -45,10 +45,7 @@ public class MatchaMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CAMELLIA_SINENSIS.getId(),
-                    ModBlocks.POTTED_CAMELLIA_SINENSIS);
-        });
+
     }
 
 
