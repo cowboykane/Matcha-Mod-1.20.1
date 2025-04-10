@@ -27,7 +27,7 @@ public class ModItems {
     public static final RegistryObject<Item> MATCHA_COOKIE = ITEMS.register("matcha_cookie",
             () -> new Item(new Item.Properties().food(ModFoods.MATCHA_COOKIE)));
 
-    public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder.json",
+    public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
