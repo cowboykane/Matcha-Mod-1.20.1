@@ -1,5 +1,6 @@
 package net.wickedkane.MatchaMod.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,6 +28,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_CAMELLIA_SINENSIS = BLOCKS.register("potted_camellia_sinensis",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CAMELLIA_SINENSIS,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission())); */
+
+    public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block); // registers block

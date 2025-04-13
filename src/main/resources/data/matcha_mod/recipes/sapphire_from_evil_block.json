@@ -6,6 +6,8 @@
       "item": "matcha_mod:evil_block"
     }
   ],
-  "result": "matcha_mod:sapphire",
-  "count": 9
+  "result": {
+    "item": "matcha_mod:sapphire",
+    "count": 9
+  }
 }
