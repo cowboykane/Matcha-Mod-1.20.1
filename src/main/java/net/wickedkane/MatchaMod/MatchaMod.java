@@ -32,15 +32,19 @@ public class MatchaMod {
     public MatchaMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        ModItems.register(modEventBus); // add items to the game
+        ModCreativeModeTabs.register(modEventBus);
 
+        ModItems.register(modEventBus); // add items to the game
         ModBlocks.register(modEventBus); // add blocks DUH USE YOUR BRAIN STUPID ADUHHHH
 
-        ModCreativeModeTabs.register(modEventBus);
+        modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
 
@@ -51,7 +55,6 @@ public class MatchaMod {
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.MATCHA_COOKIE);
             event.accept(ModItems.MATCHA_POWDER);
-            event.accept(ModItems.MATCHA_TEAPOT);
 
         }
     }
