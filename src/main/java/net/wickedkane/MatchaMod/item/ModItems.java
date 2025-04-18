@@ -1,6 +1,7 @@
 package net.wickedkane.MatchaMod.item;
 
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -12,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.wickedkane.MatchaMod.MatchaMod;
+import net.wickedkane.MatchaMod.block.ModBlocks;
 
 
 import static net.minecraft.world.item.Items.registerBlock;
@@ -30,8 +32,6 @@ public class ModItems {
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> MATCHA_TEAPOT = ITEMS.register("matcha_teapot",
-            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

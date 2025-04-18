@@ -22,8 +22,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> EVIL_BLOCK = registerBlock("evil_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.ANVIL)));
 
-    public static final RegistryObject<Block> TEAPOT = registerBlock("teapot",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK))); // Teapot wah wah
+    public static final RegistryObject<Block> MATCHA_TEAPOT = registerBlock("matcha_teapot",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.DEEPSLATE))); // Teapot wah wah
+
+
 
     /* public static final RegistryObject<Block> CAMELLIA_SINENSIS = registerBlock("camellia_sinensis",
             () -> new FlowerBlock(() -> MobEffects.LUCK, 5,
@@ -32,9 +34,6 @@ public class ModBlocks {
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CAMELLIA_SINENSIS,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission())); */
 
-    public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block); // registers block
