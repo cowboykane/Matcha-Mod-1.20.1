@@ -32,23 +32,16 @@ public class MatchaMod {
     public MatchaMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
-        ModCreativeModeTabs.register(modEventBus);
-
         ModItems.register(modEventBus); // add items to the game
+
         ModBlocks.register(modEventBus); // add blocks DUH USE YOUR BRAIN STUPID ADUHHHH
 
-        modEventBus.addListener(this::commonSetup);
+        ModCreativeModeTabs.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
-    }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CAMELLIA_SINENSIS.getId(),
-                    ModBlocks.POTTED_CAMELLIA_SINENSIS);
-        });
     }
 
 
@@ -58,6 +51,7 @@ public class MatchaMod {
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.MATCHA_COOKIE);
             event.accept(ModItems.MATCHA_POWDER);
+            event.accept(ModItems.MATCHA_TEAPOT);
 
         }
     }
