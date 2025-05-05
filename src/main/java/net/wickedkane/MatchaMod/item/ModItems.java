@@ -32,6 +32,11 @@ public class ModItems {
     public static final RegistryObject<Item> MATCHA_POWDER = ITEMS.register("matcha_powder",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> MATCHA_SIEVE = ITEMS.register("matcha_sieve",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> MATCHA_SPOON = ITEMS.register("bamboo_spoon",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

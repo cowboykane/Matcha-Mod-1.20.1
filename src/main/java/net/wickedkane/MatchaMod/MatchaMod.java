@@ -61,6 +61,8 @@ public class MatchaMod {
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.MATCHA_COOKIE);
             event.accept(ModItems.MATCHA_POWDER);
+            event.accept(ModItems.MATCHA_SIEVE);
+            event.accept(ModItems.MATCHA_SPOON);
 
         }
     }
